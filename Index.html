@@ -1,39 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily.co Video Call</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            overflow: hidden; /* Garante que não haja barras de rolagem */
-        }
-        #daily-frame {
-            height: 100%;
-            width: 100%;
-            border: 0;
-        }
-    </style>
-    <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            const callFrame = window.DailyIframe.createFrame({
-                iframeStyle: {
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    border: 'none'
-                }
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src='https://8x8.vc/vpaas-magic-cookie-c5deb3d3a1244d9ba0d86fc5d1b690a6/external_api.js' async></script>
+        <style>html, body, #jaas-container { height: 100%; }</style>
+        <script type="text/javascript">
+          window.onload = () => {
+            const api = new JitsiMeetExternalAPI("8x8.vc", {
+              roomName: "vpaas-magic-cookie-c5deb3d3a1244d9ba0d86fc5d1b690a6/SampleAppUnknownDoubtsDismissSignificantly",
+              parentNode: document.querySelector('#jaas-container'),
+							// Make sure to include a JWT if you intend to record,
+							// make outbound calls or use any other premium features!
+							// jwt: "eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtYzVkZWIzZDNhMTI0NGQ5YmEwZDg2ZmM1ZDFiNjkwYTYvYTkxMjIwLVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImlzcyI6ImNoYXQiLCJpYXQiOjE3MjI4NTcwOTIsImV4cCI6MTcyMjg2NDI5MiwibmJmIjoxNzIyODU3MDg3LCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtYzVkZWIzZDNhMTI0NGQ5YmEwZDg2ZmM1ZDFiNjkwYTYiLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOmZhbHNlLCJvdXRib3VuZC1jYWxsIjpmYWxzZSwic2lwLW91dGJvdW5kLWNhbGwiOmZhbHNlLCJ0cmFuc2NyaXB0aW9uIjpmYWxzZSwicmVjb3JkaW5nIjpmYWxzZX0sInVzZXIiOnsiaGlkZGVuLWZyb20tcmVjb3JkZXIiOmZhbHNlLCJtb2RlcmF0b3IiOnRydWUsIm5hbWUiOiJUZXN0IFVzZXIiLCJpZCI6Imdvb2dsZS1vYXV0aDJ8MTAwMTk5MjU1NjE5NjU0NDM0OTgxIiwiYXZhdGFyIjoiIiwiZW1haWwiOiJ0ZXN0LnVzZXJAY29tcGFueS5jb20ifX0sInJvb20iOiIqIn0.h1XyJyBqwa_xmbH0nvKnpz6Hpscd6lHb5hdpSdhKuMK19WkV30oZs9Cef9WAnctkudy44W-BNlEB_Ao8j49iatLTQwTf_0I5EgcdRl5xwMOBm2op4-ozyMMqSvHtscfPDSG3ddXFrDYSPsiADo-78YoEzD_gKs9S3yM_NjII5sQ5UWefmY1VxjwKerdeA3MC5aVKc1mQ4udEAXM_thOAlwtt38QjuRLfKqbYWOKqFhUcXcWNlKRj9Nj5wPaGcBSKvPpzk--thgdR_isG1eID7S9z1cEsW7nxNyaEplMV9vZ7FofP8e8AVROOs_-aUkcKzGgoN_9Bia3uOhEey0xZBw"
             });
-            callFrame.join({ url: 'https://hugohuhosjnssnndjdj.daily.co/hello-daily' });
-        });
-    </script>
-</head>
-<body>
-    <div id="daily-frame"></div>
-</body>
-</html>
+          }
+        </script>
+      </head>
+      <body><div id="jaas-container" /></body>
+    </html>
+  
